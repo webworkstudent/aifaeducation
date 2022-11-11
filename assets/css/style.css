@@ -322,9 +322,9 @@ footer .line {
     background-color: var(--c-brand);
     color: white;
 }
-about.p
+.about p
 {
    text-align:left;
-   background-color: red;
+   background-color:  #ffb899;
 }
     
