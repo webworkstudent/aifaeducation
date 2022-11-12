@@ -325,6 +325,7 @@ footer .line {
 
 #about p
 { 
-    margin-left: 20px;
+    margin-left: 3px;
+    text-align:justify;
 }
     
