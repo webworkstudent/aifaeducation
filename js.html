@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming Language</title>
+  <!-- bootstrap 5 css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <!-- BOX ICONS CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.side-navbar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  margin-left: -300px;
+  background-color: #151615;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #ffffff26;
+}
+
+.my-container {
+  transition: 0.4s;
+}
+
+.active-nav {
+  margin-left: 0;
+}
+
+/* for main section */
+.active-cont {
+  margin-left: 250px;
+}
+
+#menu-btn {
+  background-color: #100901;
+  color: #fff;
+  margin-left: -62px;
+}
+
+.my-container input {
+  border-radius: 2rem;
+  padding: 2px 20px;
+}
+
+</style>
+<body>
+  <!-- Side-Nav -->
+  <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+     <ul class="nav flex-column text-white w-100">
+      <a href="#" class="nav-link h3 text-white my-2">
+        JAVASCRIPT
+      </a>
+      <li class="nav-item">
+        <a class="nav-link" href="#basic_concepts">Basic Concepts</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#variables">variables</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#operators">operators</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#conditionals">conditionals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#loops">loops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#functions">functions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#objects">objects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#arrays">arrays</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">events</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#dom_manipulation">DOM Manipulation</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#selecting_elements">selecting_elements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#modifying_elements">modifying_elements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#working_with_forms">working_with_forms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#handling_events">handling_events</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#advanced_javascript">Advanced JavaScript</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#object_oriented_programming">object_oriented_programming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#prototypes_and_inheritance">prototypes_and_inheritance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#closures">closures</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#callbacks">callbacks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#promises">promises</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#asynchronous_programming">asynchronous_programming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#error_handling">error_handling</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#regular_expressions">regular_expressions</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#error_handling_best_practices">Error handling best practices</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#regular_expressions">Regular Expressions</a>
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#regular_expression_syntax">Regular expression syntax</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#string_methods_with_regular_expressions">String methods with regular expressions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#regular_expression_examples">Regular expression examples</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#web_apis">Web APIs</a>
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#browser_apis">Browser APIs</a>
+                <ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#document_object_model_dom">Document Object Model (DOM)</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#geolocation_api">Geolocation API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#web_storage_api">Web Storage API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#web_workers_api">Web Workers API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#web_sockets_api">Web Sockets API</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#third_party_apis">Third-party APIs</a>
+                <ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#google_maps_api">Google Maps API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#twitter_api">Twitter API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#facebook_api">Facebook API</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#libraries_and_frameworks">Libraries and Frameworks</a>
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#jquery">jQuery</a>
+                <ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#selecting_and_manipulating_elements">Selecting and manipulating elements</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#animations">Animations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#ajax">AJAX</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#react">React</a>
+                <ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#components">Components</a>
+                  </li>
+                  <li class="nav-item">
+      <a class="nav-link" href="#jsx">JSX</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#state_and_props">State and Props</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#lifecycle_methods">Lifecycle methods</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#angular">Angular</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#components">Components</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#directives">Directives</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#dependency_injection">Dependency Injection</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#vue">Vue</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#components">Components</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#directives">Directives</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#templates">Templates</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#vue_cli">Vue CLI</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#node.js">Node.js</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#creating_a_server">Creating a server</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#reading_and_writing_files">Reading and writing files</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#npm">NPM (Node Package Manager)</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#express.js">Express.js</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#tools_and_development">Tools and Development</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#debugging">Debugging</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#debugging">Debugging</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#console_log">Console.log()</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#debugging_tools">Debugging tools (e.g. Chrome DevTools)</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#debugger_statement">Debugger statement</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#breakpoints">Breakpoints</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#testing">Testing</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#unit_testing">Unit testing</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#integration_testing">Integration testing</a>
+      </li>
+        
+        <li class="nav-item">
+        <a class="nav-link" href="#debugging">Debugging</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#console_log">console.log()</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#debugging_tools">debugging tools (e.g. Chrome DevTools)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#debugger_statement">debugger statement</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#breakpoints">breakpoints</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#testing">Testing</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#unit_testing">unit testing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#integration_testing">integration testing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tdd">test-driven development (TDD)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#assertion_libraries">assertion libraries (e.g. Jest, Mocha, Chai)</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#module_bundlers">Module Bundlers</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#webpack">webpack</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rollup">rollup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#parcel">parcel</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#task_runners">Task Runners</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#grunt">grunt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gulp">gulp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#npm_scripts">npm scripts</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#linting">Linting</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#eslint">ESLint</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#jshint">JSHint</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#transpiling">Transpiling</a>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#babel">Babel</a>
+          </li>
+          <li class="nav-item">
+      <a class="nav-link" href="#typescript">TypeScript</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#code_quality">Code Quality</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#code_reviews">Code reviews</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#code_standards">Code standards</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#refactoring">Refactoring</a>
+      </li>
+      </ul>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#version_control">Version Control</a>
+      <ul>
+      <li class="nav-item">
+      <a class="nav-link" href="#git_basics">Git basics</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#branching_and_merging">Branching and merging</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#github_and_gitlab">GitHub and GitLab</a>
+      </li>
+      </ul>
+      </li>
+      
+      
+      
+    </ul> 
+  </div>
+
+  <!-- Main Wrapper -->
+  <div class="p-1 my-container active-cont">
+    <!-- Top Nav -->
+    <nav class="navbar top-navbar navbar-light bg-light px-5">
+      <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+    </nav>
+    <!--End Top Nav -->
+    <!-- <h3 class="text-dark p-3">For your content</h3>
+    <p class="px-3"> You can type your text here</p> -->
+  </div>
+
+  <!-- bootstrap js -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script>
+    var menu_btn = document.querySelector("#menu-btn");
+var sidebar = document.querySelector("#sidebar");
+var container = document.querySelector(".my-container");
+menu_btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active-nav");
+  container.classList.toggle("active-cont");
+});
+
+  </script>
+</body>
+
+</html>
