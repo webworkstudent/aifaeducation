@@ -1,102 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML LANGUAGE</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-LnKKq3lU6l2m6ZwuLXneOGmkq3rCNFvOnT+MXw/qHG0yfIR0G8BvLHTtyJOsDf9s" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-k2NPF8Pv+WEg/pNxbwzFFN+YSWt8lxsr+1TZzt/UGc63Q2EQq8Ie/hT2mzT3CnYY" crossorigin="anonymous"></script>
-  
-  
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .sidebar {
-      height: 100%;
-      width: 200px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow-x: hidden;
-    }
-    .sidebar a {
-      display: block;
-      padding: 15px;
-      color: rgb(19, 10, 10);
-      text-decoration: none;
-    }
-    .sidebar a:hover {
-      background-color: #73b7ee;
-    }
-    .main {
-      margin-left: 200px;
-      padding: 20px;
-    }
-    @media screen and (max-height: 450px) {
-      .sidebar {
-        padding-top: 15px;
-      }
-      .sidebar a {
-        font-size: 18px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming Language</title>
+  <!-- bootstrap 5 css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <!-- BOX ICONS CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.side-navbar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  margin-left: -300px;
+  background-color: #151615;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #ffffff26;
+}
+
+.my-container {
+  transition: 0.4s;
+}
+
+.active-nav {
+  margin-left: 0;
+}
+
+/* for main section */
+.active-cont {
+  margin-left: 250px;
+}
+
+#menu-btn {
+  background-color: #100901;
+  color: #fff;
+  margin-left: -62px;
+}
+
+.my-container input {
+  border-radius: 2rem;
+  padding: 2px 20px;
+}
+
+</style>
 <body>
+  <!-- Side-Nav -->
+  <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+     <ul class="nav flex-column text-white w-100">
+      <a href="#" class="nav-link h3 text-white my-2">
+        HTML
+      </a>
 
-
-
-   <div class="container-fluid">
-     <div class="row">
-       <div class="col-md-3 col-lg-2 bg-light collapse" id="sidebar">
-         <ul class="list-group list-group-flush">
-         
-   <div class="sidebar">
-      <ul class="list-group">
-   
-         <li class="nav-item">
-         <a class="nav-link" href="#basic_html">Basic HTML</a>
-   
-         <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#tags">Tags</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#heading">Headings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#paragraphs">Paragraphs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#links">Links</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#images">Images</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#lists">Lists</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tables">Tables</a>
-            </li>
-         </ul>       
-      </li>
-            
-      <li class="nav-item">
-         <a class="nav-link" href="#tables">Tables</a>
+       <li class="nav-item">
+<a class="nav-link" href="#introduction">Introduction</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#c_lang">C Intro</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#history">History</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#features">Features</a>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link" href="#advantage">Advantages</a>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link" href="#disadvantage">Disadvantages</a>
+    </li>
+</ul>
        </li>
-        
-         </ul>
-   
-   </div>
-         </ul>
-       </div>
-       <div class="main">
-         <!-- Add main content here -->
-       </div>
-     </div>
-   </div>
-   </body>
+       <li class="nav-item">
+<a class="nav-link" href="#environment">Environment</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#setup">Setup</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#compilation">Compilation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#ide">IDE</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#command_line">Command Line</a>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#da_va_co">Data Variables & Constants</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#data_type">Data Type</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#variables">Variables</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#constants">Constants</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#quarlifiers">Qualifiers</a>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#expre_oper">Operator & Expressions</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#operators">Operators</a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#arithmetic">Arithmetic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#relational">Relational</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#logical">Logical</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#bitwise">Bitwise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#assignment">Assignment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#ternary">Ternary</a>
+            </li>
+        </ul>
+        <li class="nav-item">
+            <a class="nav-link" href="#precedence">Precedence</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#associativity">Associativity</a>
+        </li>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#cont_str">Control Structures</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#deci_mak">Decision Making </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#if">If</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#if_else">If-Else</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#nes_if_else">Nested If-Else</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#switch">Switch</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#loops">Loops</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#while">While Loop</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#do_while">Do-while Loop</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#for">For Loop</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#break_cont">Break & Continue</a>
+    </li>
+    
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#arr_point">Arrays & Pointers</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#arrays">Arrays</a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#type_arr">Types of Arrays</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#multi">Multidimensional Arrays</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#pointers">Pointers</a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#arith_pointers">Arithmetic Pointers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#po_fun">Pointers & Function</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#dyna_memo">Dynamic Memory Allocation</a>
+            </li>
+        </ul>
+    </li>
+    
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#functions">Functions</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#def_call">Defining & Calling</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#arguments">Arguments</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#return">Return</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#scope">Scope</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#recursive">Recursive Functions</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#library">Library</a>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#strings">Strings</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#character">Character Arrays</a>
+               </li>
+               <li class="nav-item">
+        <a class="nav-link" href="#in_out">Input & Output</a>
+               </li>
+            </ul>
+       </li>
+       
+       <li class="nav-item">
+<a class="nav-link" href="#str_union">Structures & Unions</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#define">Defining Structures</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#accessing">Accessing Structures</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#nested_str">Nested Structures</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#unions">Unions</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#str_un">Difference b/w Structures & Unions</a>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#file_handle">File Handling</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#open_close">Open & Closing Files</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#read_write">Read & Write Files</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#binary">Binary Files</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#position">Positioning Functions</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#error">Error Handling</a>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+<a class="nav-link" href="#prepro_dir">Preprocessor Directives</a>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link" href="#include">#Include Directive</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#define">#Define Directive</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#conditional">Conditional Compilation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#def_dir">#ifdef, #ifndef, #if, #else, #elif, #endif Directives
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#pragma">Pragma Directive</a>
+    </li>
+</ul>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#miscellaneous">Miscellaneous Topics</a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#com_li_arg">Command Line Arguments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#enumerated">Enumerated Data Type</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#bit_flds">Bit Fields</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#keyword">Typedef Keyword</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#casting">Type Casting</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#macros">Macros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#recursion">Recursion</a>
+            </li>
+        </ul>
+    </li>
+
+    </ul> 
+  </div>
+
+  <!-- Main Wrapper -->
+  <div class="p-1 my-container active-cont">
+    <!-- Top Nav -->
+    <nav class="navbar top-navbar navbar-light bg-light px-5">
+      <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+    </nav>
+    <!--End Top Nav -->
+    <!-- <h3 class="text-dark p-3">For your content</h3>
+    <p class="px-3"> You can type your text here</p> -->
+  </div>
+
+  <!-- bootstrap js -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script>
+    var menu_btn = document.querySelector("#menu-btn");
+var sidebar = document.querySelector("#sidebar");
+var container = document.querySelector(".my-container");
+menu_btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active-nav");
+  container.classList.toggle("active-cont");
+});
+
+  </script>
+</body>
+
 </html>
+
+
