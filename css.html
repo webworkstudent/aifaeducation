@@ -1,333 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Changa+One);
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programming Language</title>
-  <!-- bootstrap 5 css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-  <!-- BOX ICONS CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
-  <!-- custom css -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    .my-container {
+        margin-top: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+
+
+    }
+
+    .col {
+        border: 1px solid rgb(245, 240, 240);
+        padding: 5px;
+        margin: 5px;
+        color: white;
+        background-color: #83a4e6;
+        text-align: center;
+    }
+
+    .col {
+        display: inline-block;
+        padding: 20px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #131010;
+        border: none;
+        transition: transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;
+    }
+
+    .col:hover {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 #939496;
+    }
+
+    .col:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 #939496;
+        border-bottom: none;
+    }
+
+    /* .btn {
+        color: black;
+        background-color: rgb(209, 198, 198);
+        margin-right: 13px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        width: 110px;
+        border: none;
+        border-radius: none;
+    }
+
+    .btn:hover {
+        background-color: rgb(209, 198, 198);
+        color: inherit;
+        border: none;
+    } */
+    .dropdown-menu {
+  max-height: 300px; 
+  overflow-y: auto; 
 }
-
-body {
-  min-height: 100vh;
-  background-color: #fff;
-}
-
-.side-navbar {
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  margin-left: -300px;
-  background-color: #151615;
-  transition: 0.5s;
-  overflow-y: auto;
-}
-
-.nav-link:active,
-.nav-link:focus,
-.nav-link:hover {
-  background-color: #ffffff26;
-}
-
-.my-container {
-  transition: 0.4s;
-}
-
-.active-nav {
-  margin-left: 0;
-}
-
-/* for main section */
-.active-cont {
-  margin-left: 250px;
-}
-
-#menu-btn {
-  background-color: #100901;
-  color: #fff;
-  margin-left: -62px;
-}
-
-.my-container input {
-  border-radius: 2rem;
-  padding: 2px 20px;
-}
-
 </style>
-<body>
-  <!-- Side-Nav -->
-  <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
-     <ul class="nav flex-column text-white w-100">
-      <a href="#" class="nav-link h3 text-white my-2">
-        CSS
-      </a>
+  <body>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#introduction">Introduction to CSS</a>
-        <ul>
-          <li class="nav-item">
-        <a class="nav-link" href="#inline">Inline CSS</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#internal">Internal CSS</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#external">External CSS</a>
-    </li>
-    
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#selectors">CSS Selectors</a>
-        <ul>
-          <li class="nav-item">
-        <a class="nav-link" href="#sel_element">Element Selector</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#sel_class">Class Selector</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#sel_id">ID Selector</a>
-    </li><li class="nav-item">
-        <a class="nav-link" href="#sel_attribute">Attribute Selector</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#pseudo_class">Pseudo-classes</a>
-    </li>
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#box_model">CSS Box Model</a>
-        <ul>
-          <li class="nav-item">
-        <a class="nav-link" href="#margin">Margin</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#border">Border</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#padding">Padding</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#width_height">Width & Height</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#box_sizing">Box-Sizing</a>
-    </li>
-         
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#layout">CSS Layout</a>
-        <ul>
-          <li class="nav-item">
-        <a class="nav-link" href="#positioning">Positioning</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#display">Display</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#float">Float</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#grid">Grid</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#flexbox">Flexbox</a>
-    </li>
-            
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#typography">CSS Typography</a>
-        <ul>
-          <li class="nav-item">
-        <a class="nav-link" href="#font_family">Font Family</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#font_size">Font Size</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#font_style">Font Style</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#font_weight">Font Weight</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#text_alignment">Text Alignment</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#text_decoration">Text Decoration</a>
-    </li>
-           
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#color_background">CSS Color and Background</a>
-        <ul>
-            <li class="nav-item">
-        <a class="nav-link" href="#color_names">Color Names</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#rgb_colors">RGB Colors</a>
-    </li>
-            <li class="nav-item">
-        <a class="nav-link" href="#opacity">Opacity</a>
-    </li>
-            <li class="nav-item">
-        <a class="nav-link" href="#back_images">Background Images</a>
-    </li>
-            <li class="nav-item">
-        <a class="nav-link" href="#flexbox">Flexbox</a>
-    </li>
-        
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#responsive">CSS Responsive Design</a>
-        <ul>
-            
-          <li class="nav-item">
-        <a class="nav-link" href="#media_queries">Media Queries</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#viewport">Viewport Meta Tag</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#>responsive_mages">Responsive Images</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#responsive_tables">Responsive Tables</a>
-    </li>
-    
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#animations_trans">CSS Animations and Transitions</a>
-        <ul>
-            
-          <li class="nav-item">
-        <a class="nav-link" href="#keyframes">Keyframes</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#animation)prop">Animation Properties</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#transition_prop">Transition Properties</a>
-    </li>
-    
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#frameworks">CSS Frameworks</a>
-        <ul>
-            
-          <li class="nav-item">
-        <a class="nav-link" href="#bootstrap">Bootstrap</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#foundation">Foundation</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#materialize">Materialize</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#bulma">Bulma</a>
-    </li>
-    
-        </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#preprocessors">CSS Preprocessors</a>
-        <ul>
-            
-          <li class="nav-item">
-        <a class="nav-link" href="#sass">Sass</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#less">Less</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#stylus">Stylus</a>
-    </li>
-    
-      </ul>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link" href="#disadvantages">CSS Disadvantages</a>
-        <ul>
-            
-          <li class="nav-item">
-        <a class="nav-link" href="#brow_compi">Browser Compatibility Issues</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#specificity">CSS Specificity</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#complexity">CSS Complexity</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#limilay">Limited Layout</a>
-    </li>
-          <li class="nav-item">
-        <a class="nav-link" href="#diff_debugging">Difficulty in Debugging</a>
-    </li>
-    
-      </ul>
-    </li>
-    
-    
-    
+      <nav class="navbar navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span style="color:rgb(247, 4, 97);">CS</span><span style="color:rgb(247, 190, 4);">S</span></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="dropdown">
+              <input type="text" class="form-control dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="myInput" onkeyup="myFunction()" placeholder="Search for Language.."
+                  title="Type in a name">
+              <ul class="dropdown-menu" aria-labelledby="search" id="myUL">
 
-    </ul> 
-  </div>
+                  <li><a class="dropdown-item" href="./html.html" onclick="updateLinks('html')">HTML</a></li>
+                  <li><a class="dropdown-item" href="./css.html" onclick="updateLinks('css')">CSS</a></li>
+                  <li><a class="dropdown-item" href="./c.html" onclick="updateLinks('c')">C</a></li>
+                  <li><a class="dropdown-item" href="./java.html" onclick="updateLinks('java')">JAVA</a></li>
+                  <li><a class="dropdown-item" href="./javascript.html" onclick="updateLinks('javascript')">JAVASCRIPT</a></li>
+                  <li><a class="dropdown-item" href="./c_sharp.html" onclick="updateLinks('c_sharp')">C#</a></li>
+                  <li><a class="dropdown-item" href="./bootstrap.html"
+                          onclick="updateLinks('bootstrap')">BOOTSTRAP</a></li>
+                  <li><a class="dropdown-item" href="./angularjs.html" onclick="updateLinks('anagularjs')">ANGULAR
+                          JS</a></li>
+                  <li><a class="dropdown-item" href="./jquery.html" onclick="updateLinks('jquery')">JQUERY</a></li>
+                  <li><a class="dropdown-item" href="./digitalmarketing.html"
+                          onclick="updateLinks('digitalmarketing')">DIGITAL MARKETING</a></li>
+                  <li><a class="dropdown-item" href="./asp_net.html" onclick="updateLinks('asp_net')">ASP.NET</a></li>
+                  <li><a class="dropdown-item" href="./json.html" onclick="updateLinks('json')">JSON</a></li>
+                  <li><a class="dropdown-item" href="./mysql.html" onclick="updateLinks('mysql')">MYSQL</a></li>
+                  <li><a class="dropdown-item" href="./tally_prime.html" onclick="updateLinks('tally_prime')">TALLY
+                          PRIME</a></li>
+                  <li><a class="dropdown-item" href="./microsot_office.html"
+                          onclick="updateLinks('microsot_office')">MICROSOFT OFFICE</a></li>
+                  <li><a class="dropdown-item" href="./php.html" onclick="updateLinks('php')">PHP</a></li>
+                  <li><a class="dropdown-item" href="./R.html" onclick="updateLinks('R')">R</a></li>
+                  <li><a class="dropdown-item" href="./ruby.html" onclick="updateLinks('ruby')">RUBY</a></li>
+                  <li><a class="dropdown-item" href="./busy.html" onclick="updateLinks('busy')">BUSY</a></li>
+                  <li><a class="dropdown-item" href="./seo.html" onclick="updateLinks('seo')">SEO</a></li>
+                  <li><a class="dropdown-item" href="./shell.html" onclick="updateLinks('shell')">SHELL</a></li>
+                  <li><a class="dropdown-item" href="./database.html" onclick="updateLinks('database')">DATABASE</a>
+                  <li><a class="dropdown-item" href="./vba_macro.html" onclick="updateLinks('vba_macro')">VBA
+                          MACRO</a>
+                  </li>
+              </ul>
+          </div>
+          </div>
+        </nav>
+      </nav>
 
-  <!-- Main Wrapper -->
-  <div class="p-1 my-container active-cont">
-    <!-- Top Nav -->
-    <nav class="navbar top-navbar navbar-light bg-light px-5">
-      <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
-    </nav>
-    <!--End Top Nav -->
-    <!-- <h3 class="text-dark p-3">For your content</h3>
-    <p class="px-3"> You can type your text here</p> -->
-  </div>
+     
+      <div class="container my-container">      
+          <div class="row">
+          <div class="col h-140 w-30">Intoduction</div>
+          <div class="col h-140 w-30">Syntax and Basic  Structures</div>
+          <div class="col h-140 w-30">Box Model</div>
+          <div class="col h-140 w-30">Layout</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Typography</div>
+          <div class="col h-140 w-30">Colors</div>
+          <div class="col h-140 w-30">Background</div>
+          <div class="col h-140 w-30">Borders</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Pseudo-Classes & Pseudo-elements</div>
+          <div class="col h-140 w-30">Forms</div>
+          <div class="col h-140 w-30">Input Types</div>
+          <div class="col h-140 w-30">Dropdowns</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Transition and Animation</div>
+          <div class="col h-140 w-30">Media Queries</div>
+          <div class="col h-140 w-30">Responsive Design</div>
+          <div class="col h-140 w-30">Preprocessors</div>
+          </div>
+                  
+        </div>
+      </div>
+      
+      
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+</script>
 
-  <!-- bootstrap js -->
+<script>
+function updateLinks(brand) {
+    var items = $(".dropdown-item");
+    items.each(function () {
+        var link = $(this).attr("href");
+        var text = $(this).text().trim();
+        if (text.toLowerCase() === brand.toLowerCase()) {
+            $(this).removeAttr("href");
+            $(this).addClass("disabled");
+        }
+        else {
+            $(this).attr("href", link);
+            $(this).removeClass("disabled");
+        }
+    });
+}
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  <script>
-    var menu_btn = document.querySelector("#menu-btn");
-var sidebar = document.querySelector("#sidebar");
-var container = document.querySelector(".my-container");
-menu_btn.addEventListener("click", () => {
-  sidebar.classList.toggle("active-nav");
-  container.classList.toggle("active-cont");
+$(document).ready(function () {
+    var brand = $(".navbar-brand").text().trim().replace(/\s/g, "").toLowerCase();
+    updateLinks(brand);
 });
 
-  </script>
+
+
+// ============================= FOR SEARCH OR TO FILTER THE LIST===========================
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
 </body>
 
 </html>
-

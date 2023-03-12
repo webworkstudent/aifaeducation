@@ -1,481 +1,219 @@
-<!-- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ LANGUAGE</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-    
-</head>
-<body>
-    <div class="list-group-flush"><center><span class="intro">C++ LANGUAGE</span></center></div>
-    <div class="list-group-flush">
-        <ul>
-       <li><a href="" class="list-group-item list-group-item-action">Introduction</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Variables and Data Types</a></li>     
-       <li><a href="" class="list-group-item list-group-item-action">Operator & Expressions</a></li>
-            <li><a href="" class="list-group-item list-group-item-action">Functions in C++</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Classes and Objects</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Constructor and Destructor</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Inheritance</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Operator OVerloading</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Managing Input and Output</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Virtual Funtions and Polymorphosim</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Templates</a> </li>
-       <li><a href="" class="list-group-item list-group-item-action">File Handling</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Manipulating Strings</a></li>
-       <li><a href="" class="list-group-item list-group-item-action">Exception Handling</a></li>
-    </ul>
-      </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C++</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Changa+One);
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./assets/js/main.js"></script>
-</body>
-</html>
- -->
+    .my-container {
+        margin-top: 50px;
+        padding: 10px;
+        box-sizing: border-box;
 
 
-<!DOCTYPE html>
-<html lang="en">
+    }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programming Language</title>
-  <!-- bootstrap 5 css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-  <!-- BOX ICONS CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
-  <!-- custom css -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    .col {
+        border: 1px solid rgb(245, 240, 240);
+        padding: 5px;
+        margin: 5px;
+        color: white;
+        background-color: #83a4e6;
+        text-align: center;
+    }
+
+    .col {
+        display: inline-block;
+        padding: 20px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #131010;
+        border: none;
+        transition: transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;
+    }
+
+    .col:hover {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 #939496;
+    }
+
+    .col:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 #939496;
+        border-bottom: none;
+    }
+
+    /* .btn {
+        color: black;
+        background-color: rgb(209, 198, 198);
+        margin-right: 13px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        width: 110px;
+        border: none;
+        border-radius: none;
+    }
+
+    .btn:hover {
+        background-color: rgb(209, 198, 198);
+        color: inherit;
+        border: none;
+    } */
+    .dropdown-menu {
+  max-height: 300px; 
+  overflow-y: auto; 
 }
-
-body {
-  min-height: 100vh;
-  background-color: #fff;
-}
-
-.side-navbar {
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  margin-left: -300px;
-  background-color: #151615;
-  transition: 0.5s;
-  overflow-y: auto;
-}
-
-.nav-link:active,
-.nav-link:focus,
-.nav-link:hover {
-  background-color: #ffffff26;
-}
-
-.my-container {
-  transition: 0.4s;
-}
-
-.active-nav {
-  margin-left: 0;
-}
-
-/* for main section */
-.active-cont {
-  margin-left: 250px;
-}
-
-#menu-btn {
-  background-color: #100901;
-  color: #fff;
-  margin-left: -62px;
-}
-
-.my-container input {
-  border-radius: 2rem;
-  padding: 2px 20px;
-}
-
 </style>
-<body>
-  <!-- Side-Nav -->
-  <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
-     <ul class="nav flex-column text-white w-100">
-      <a href="#" class="nav-link h3 text-white my-2">
-        C++
-      </a>
-      <li class="nav-item">
-        <a class="nav-link" href="#basics">Basics</a>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#syntax">Syntax</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#variables">Variables</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#fund_data">Fundamental data types</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#user_defined">User-defined data types</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#type_modifiers">Type modifiers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#type_conver">Type conversions</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#operators">Operators</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#arith_oper">Arithmetic operators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#comp_oper">Comparison operators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#logic_oper">Logical operators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#bitwise_oper">Bitwise operators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#assign_oper">Assignment operators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#inde_oper">Increment/decrement operators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#tern_oper">Ternary operator</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cont_oper">Control structures</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#cond_stmt">Conditional statements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#loops">Loops</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#jump_stmt">Jump statements</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#functions">Functions</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#parameters">Parameters</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#return-values">Return values</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#func_over">Function overloading</a>
-              </li>
-           
-        <li class="nav-item">
-          <a class="nav-link" href="#function_temp">Function templates</a>
-        </li>
-            </ul>
-              </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#arrays">Arrays</a>
-          <ul>
-            <li class="nav-item">
-              <a class="nav-link" href="#arr_dec_ini">Declaration and initialization</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#access_el">Accessing elements</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#multi_di">Multi-dimensional arrays</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#pointers">Pointers</a>
-          <ul>
-            <li class="nav-item">
-              <a class="nav-link" href="#point_arr_dec_ini">Declaration and initialization</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#derefer">Dereferencing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#point_arith">Pointer arithmetic</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#poi_arr">Pointers and arrays</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#poi_func">Pointers and functions</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#mem_manage">Memory management</a>
-          <ul>
-            <li class="nav-item">
-              <a class="nav-link" href="#dm_alloc">Dynamic memory allocation (new/delete)</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#mld_poi">Memory leaks and dangling pointers</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#cls_obj">Classes and objects</a>
-          <ul>
-            <li class="nav-item">
-              <a class="nav-link" href="#cls_decdef">Class declaration and definition</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#constuctors">Constructors</a>
-              <ul>
-                <li class="nav-item">
-                  <a class="nav-link" href="#def_constructor">Default constructor</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#parameterized_constructor">Parameterized constructor</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#copy_constructor">Copy constructor</a>
-                </li>
+  <body>
+
+      <nav class="navbar navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span style="color:rgb(247, 4, 97);">C</span><span style="color:rgb(247, 190, 4);">++</span></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="dropdown">
+              <input type="text" class="form-control dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="myInput" onkeyup="myFunction()" placeholder="Search for Language.."
+                  title="Type in a name">
+              <ul class="dropdown-menu" aria-labelledby="search" id="myUL">
+
+                  <li><a class="dropdown-item" href="./html.html" onclick="updateLinks('html')">HTML</a></li>
+                  <li><a class="dropdown-item" href="./css.html" onclick="updateLinks('css')">CSS</a></li>
+                  <li><a class="dropdown-item" href="./c.html" onclick="updateLinks('c')">C</a></li>
+                  <li><a class="dropdown-item" href="./java.html" onclick="updateLinks('java')">JAVA</a></li>
+                  <li><a class="dropdown-item" href="./javascript.html" onclick="updateLinks('javascript')">JAVASCRIPT</a></li>
+                  <li><a class="dropdown-item" href="./c_sharp.html" onclick="updateLinks('c_sharp')">C#</a></li>
+                  <li><a class="dropdown-item" href="./bootstrap.html"
+                          onclick="updateLinks('bootstrap')">BOOTSTRAP</a></li>
+                  <li><a class="dropdown-item" href="./angularjs.html" onclick="updateLinks('anagularjs')">ANGULAR
+                          JS</a></li>
+                  <li><a class="dropdown-item" href="./jquery.html" onclick="updateLinks('jquery')">JQUERY</a></li>
+                  <li><a class="dropdown-item" href="./digitalmarketing.html"
+                          onclick="updateLinks('digitalmarketing')">DIGITAL MARKETING</a></li>
+                  <li><a class="dropdown-item" href="./asp_net.html" onclick="updateLinks('asp_net')">ASP.NET</a></li>
+                  <li><a class="dropdown-item" href="./json.html" onclick="updateLinks('json')">JSON</a></li>
+                  <li><a class="dropdown-item" href="./mysql.html" onclick="updateLinks('mysql')">MYSQL</a></li>
+                  <li><a class="dropdown-item" href="./tally_prime.html" onclick="updateLinks('tally_prime')">TALLY
+                          PRIME</a></li>
+                  <li><a class="dropdown-item" href="./microsot_office.html"
+                          onclick="updateLinks('microsot_office')">MICROSOFT OFFICE</a></li>
+                  <li><a class="dropdown-item" href="./php.html" onclick="updateLinks('php')">PHP</a></li>
+                  <li><a class="dropdown-item" href="./R.html" onclick="updateLinks('R')">R</a></li>
+                  <li><a class="dropdown-item" href="./ruby.html" onclick="updateLinks('ruby')">RUBY</a></li>
+                  <li><a class="dropdown-item" href="./busy.html" onclick="updateLinks('busy')">BUSY</a></li>
+                  <li><a class="dropdown-item" href="./seo.html" onclick="updateLinks('seo')">SEO</a></li>
+                  <li><a class="dropdown-item" href="./shell.html" onclick="updateLinks('shell')">SHELL</a></li>
+                  <li><a class="dropdown-item" href="./database.html" onclick="updateLinks('database')">DATABASE</a>
+                  <li><a class="dropdown-item" href="./vba_macro.html" onclick="updateLinks('vba_macro')">VBA
+                          MACRO</a>
+                  </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#destructors">Destructors</a>
-            </li>
-            
-            
-            
-            <li class="nav-item">
-        <a class="nav-link" href="#data_members">Data members</a>
-        <ul>
-          <li class="nav-item"><a class="nav-link" href="#access_specifiers-(public,-private,-protected)">Access specifiers (public, private, protected)</a></li>
-          <li class="nav-item"><a class="nav-link" href="#static_data_members">Static data members</a></li>
-          <li class="nav-item"><a class="nav-link" href="#const_data_members">Const data members</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#member_functions">Member functions</a>
-        <ul>
-          <li class="nav-item"><a class="nav-link" href="#access_specifiers">Access specifiers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#inline_functions">Inline functions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#friend_functions">Friend functions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#operator_overloading">Operator overloading</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#inheritance">Inheritance</a>
-        <ul>
-          <li class="nav-item"><a class="nav-link" href="#base_class_and_derived_class">Base class and derived class</a></li>
-          <li class="nav-item"><a class="nav-link" href="#types_of_inheritance-(single,-multiple,-hierarchical)">Types of inheritance (single, multiple, hierarchical)</a></li>
-          <li class="nav-item"><a class="nav-link" href="#access_specifiers_in_inheritance">Access specifiers in inheritance</a></li>
-          <li class="nav-item"><a class="nav-link" href="#virtual_base_class">Virtual base class</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#polymorphism">Polymorphism</a>
-        <ul>
-          <li class="nav-item"><a class="nav-link" href="#virtual_functions">Virtual functions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#abstract_classes">Abstract classes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pure_virtual_functions">Pure virtual functions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#virtual_destructors">Virtual destructors</a></li>
-          <li class="nav-item"><a class="nav-link" href="#virtual_inheritance">Virtual inheritance</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Templates">Templates</a>
-        <ul>
-          <li class="nav-item"><a class="nav-link" href="#function_templates">Function templates</a></li>
-          <li class="nav-item"><a class="nav-link" href="#class_templates">Class templates</a></li>
-          <li class="nav-item"><a class="nav-link" href="#template_specialization">Template specialization</a></li>
-         <li class="nav-item">
-        <a class="nav-link" href="#template_metaprogramming">Template Metaprogramming</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#exception_handling">Exception Handling</a>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#try_catch_blocks">Try/Catch Blocks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#throwing_exceptions">Throwing Exceptions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#handling_multiple_exceptions">Handling Multiple Exceptions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#catching_all_exceptions">Catching All Exceptions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#exception_safety">Exception Safety</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#standard_library">Standard Library</a>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#input_output">Input/Output</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#streams_and_stream_manipulators">Streams and Stream Manipulators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#file_input_output">File Input/Output</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#strings">Strings</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#string-operations">String Operations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#string-streams">String Streams</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#containers">Containers</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#vector">Vector</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#list">List</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#deque">Deque</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#stack">Stack</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#queue">Queue</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#set">Set</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#map">Map</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#unordered_containers">Unordered Containers</a>
-              </li>
-            </ul>
-          </li>
-          
-          
+          </div>
+          </div>
+        </nav>
+      </nav>
+
+    
+      <div class="container my-container">      
+          <div class="row">
+          <div class="col h-140 w-30">Intoduction</div>
+          <div class="col h-140 w-30">Basic Syntax</div>
+          <div class="col h-140 w-30">Data Types</div>
+          <div class="col h-140 w-30">Variables</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Constants</div>
+          <div class="col h-140 w-30">Operators</div>
+          <div class="col h-140 w-30">Control Structures</div>
+          <div class="col h-140 w-30">Functions and Scope</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Classes and Objects</div>
+          <div class="col h-140 w-30">Constructors and destructors</div>
+          <div class="col h-140 w-30">Inheritance and polymorphism</div>
+          <div class="col h-140 w-30">Virtual functions</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Abstract classes</div>
+          <div class="col h-140 w-30">template and generic programming</div>
+          <div class="col h-140 w-30">exception and error handling</div>
+          <div class="col h-140 w-30">STL (Standard Template Library)</div>
+          </div>
+          <div class="row">
+          <div class="col h-140 w-30">Iterators and algorithms</div>
+          <div class="col h-140 w-30">Containers (vectors, lists, maps, etc.)</div>
+          <div class="col h-140 w-30">Smart pointers</div>
+          <div class="col h-140 w-30">Namespaces</div>
+          </div>
+          <div class="row">
+            <div class="col h-140 w-30">Operator overloading</div>
+            <div class="col h-140 w-30">Typecasting and type conversion</div>
+            <div class="col h-140 w-30">Streams and file input/output</div>
+            <div class="col h-140 w-30">Multi-threading and concurrency</div>
+            </div>
+            <div class="row">
+                <div class="col h-140 w-30">Regular expressions</div>
+                <div class="col h-140 w-30">Lambda expressions</div>
+                <div class="col h-140 w-30">Debugging and profiling</div>
+                <div class="col h-140 w-30">Compile time programming</div>
+                </div>
+        </div>
+      </div>
       
-      <li class="nav-item">
-        <a class="nav-link" href="#iterators">Iterators</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#algorithms">Algorithms</a>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#sorting">Sorting</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#searching">Searching</a>
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#binary_search">Binary search</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#merge">Merge</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#heap">Heap</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#permutations">Permutations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#numeric_algorithms">Numeric algorithms</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#smart_pointers">Smart pointers</a>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#unique_pointer">Unique pointer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#shared_pointer">Shared pointer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#weak_pointer">Weak pointer</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#type_traits">Type traits</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#regular_expressions">Regular expressions</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#random_numbers">Random numbers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#date_and_time">Date and time</a>
-      </li>
       
-    </ul> 
-  </div>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+</script>
 
-  <!-- Main Wrapper -->
-  <div class="p-1 my-container active-cont">
-    <!-- Top Nav -->
-    <nav class="navbar top-navbar navbar-light bg-light px-5">
-      <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
-    </nav>
-    <!--End Top Nav -->
-    <!-- <h3 class="text-dark p-3">For your content</h3>
-    <p class="px-3"> You can type your text here</p> -->
-  </div>
+<script>
+function updateLinks(brand) {
+    var items = $(".dropdown-item");
+    items.each(function () {
+        var link = $(this).attr("href");
+        var text = $(this).text().trim();
+        if (text.toLowerCase() === brand.toLowerCase()) {
+            $(this).removeAttr("href");
+            $(this).addClass("disabled");
+        }
+        else {
+            $(this).attr("href", link);
+            $(this).removeClass("disabled");
+        }
+    });
+}
 
-  <!-- bootstrap js -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  <script>
-    var menu_btn = document.querySelector("#menu-btn");
-var sidebar = document.querySelector("#sidebar");
-var container = document.querySelector(".my-container");
-menu_btn.addEventListener("click", () => {
-  sidebar.classList.toggle("active-nav");
-  container.classList.toggle("active-cont");
+$(document).ready(function () {
+    var brand = $(".navbar-brand").text().trim().replace(/\s/g, "").toLowerCase();
+    updateLinks(brand);
 });
 
-  </script>
+
+
+// ============================= FOR SEARCH OR TO FILTER THE LIST===========================
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
 </body>
 
 </html>
-
