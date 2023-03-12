@@ -1,0 +1,68 @@
+
+@import url(https://fonts.googleapis.com/css?family=Changa+One);
+
+.my-container {
+    margin-top: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+
+
+}
+
+.col {
+    border: 1px solid rgb(245, 240, 240);
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    background-color: #83a4e6;
+    text-align: center;
+}
+
+.col {
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #131010;
+    border: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.col:hover {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #939496;
+}
+
+.col:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #939496;
+    border-bottom: none;
+}
+
+/* .btn {
+    color: black;
+    background-color: rgb(209, 198, 198);
+    margin-right: 13px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 110px;
+    border: none;
+    border-radius: none;
+}
+
+.btn:hover {
+    background-color: rgb(209, 198, 198);
+    color: inherit;
+    border: none;
+} */
+.dropdown-menu {
+max-height: 300px; 
+max-width: 300px;
+overflow-y: auto; 
+}
+
+.dropdown{
+margin-right: 55px;
+width: 200px;
+}
